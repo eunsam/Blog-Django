@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-http-equiv="content-Type" content="text/html"; charset="utf-8">
+    <title>상세 보기</title>
+  </head>
+  <body>
+    <div align="center">
+    <p>WELCOME TO MA BLOG</p>
+    {% if blog_detail %}
+      제목: {{blog_detail.b_title}}</br>
+      내용: {{blog_detail.b_detail}}
+    {% endif %}
+    </div>
+  </body>
+</html>

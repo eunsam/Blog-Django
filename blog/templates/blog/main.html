@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-http-equiv="content-Type" content="text/html"; charset="utf-8">
+    <title>main</title>
+  </head>
+  <body>
+    <div align="center">
+    <p>WELCOME TO MA BLOG</p>
+    {% if blog_list %}
+      {% for b in blog_list %}
+      <li>
+        <a href="{% url 'blog:view' b.b_title %}">{{b.b_title}}</a></br>
+        <a href="{% url 'blog:modify' b.b_title %}">수정</a>
+        <a href="{% url 'blog:delete' b.b_title %}">삭제</a>
+        <a href="{% url 'blog:wr' %}">작성하기</a>
+      </li>
+      {% endfor %}
+    {% else %}
+    <p>Try To Write Your FIRST POSTING!</p>
+    {% endif %}
+    </div>
+  </body>
+</html>

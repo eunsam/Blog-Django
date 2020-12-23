@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-http-equiv="content-Type" content="text/html"; charset="utf-8">
+    <title>작성하기</title>
+  </head>
+  <body>
+    <div align="center">
+    <p>오늘 하루를 작성해보세요</p>
+    <form action="{% url 'blog:wrCon' %}" method="post">
+    {% csrf_token %}
+    제목 : <input type="text" name="title" placeholder="제목"></br>
+    내용 : <input type="text" name="detail" placeholder="내용"></br>
+    <input type="submit" name="Write" value="작성하기"></br>
+    </form>
+    </div>
+  </body>
+</html>
